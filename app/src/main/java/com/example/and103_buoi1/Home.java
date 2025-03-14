@@ -50,7 +50,7 @@ public class Home extends AppCompatActivity {
         btnAddCity.setOnClickListener(v -> showAddDialog());
 
 
-        recyclerView.setAdapter(cityAdapter); // Sửa lỗi
+        recyclerView.setAdapter(cityAdapter); 
 
         db = FirebaseFirestore.getInstance();
         loadCitiesFromFirestore();
@@ -132,7 +132,7 @@ public class Home extends AppCompatActivity {
         EditText edtCountry = view.findViewById(R.id.edtCountry);
         EditText edtPopulation = view.findViewById(R.id.edtPopulation);
 
-        // Gán dữ liệu cũ vào dialog
+          Gán dữ liệu cũ vào dialog
         edtFullName.setText(city.getFullName());
         edtCountry.setText(city.getCountry());
         edtPopulation.setText(String.valueOf(city.getPopulation()));
@@ -147,7 +147,7 @@ public class Home extends AppCompatActivity {
                 return;
             }
 
-            // Cập nhật vào Firestore
+              Cập nhật vào Firestore
             db.collection("cities").document(city.getId())
                     .update("fullName", updatedFullName, "country", updatedCountry, "population", updatedPopulation)
                     .addOnSuccessListener(aVoid -> {
@@ -177,7 +177,7 @@ public class Home extends AppCompatActivity {
                     cityList.clear();
                     for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                         City city = document.toObject(City.class);
-                        city.setId(document.getId()); // Lưu ID của Firestore
+                        city.setId(document.getId());   Lưu ID của Firestore
                         cityList.add(city);
                     }
                     cityAdapter.notifyDataSetChanged();
