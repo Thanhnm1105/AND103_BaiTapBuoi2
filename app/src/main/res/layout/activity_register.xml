@@ -4,18 +4,29 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/anh"
+        android:layout_margin="10dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="20sp"
-        android:text="Chào mừng bạn đến với trang đăng kí"/>
+        android:text="Chào mừng bạn đến với trang đăng kí"/>\
+    <EditText
+        android:id="@+id/edtTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên" />
 
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email" />
+
 
     <EditText
         android:id="@+id/edtPassword"

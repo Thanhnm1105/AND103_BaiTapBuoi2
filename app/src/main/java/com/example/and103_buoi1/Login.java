@@ -35,6 +35,7 @@ public class Login extends AppCompatActivity {
         tvResetPass=findViewById(R.id.tvResetPass);
         tvRegister=findViewById(R.id.tvRegister);
 
+
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
